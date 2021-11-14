@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+* {
+  font-family: 'Viaoda Libre', 'Playfair Display', 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background-color: black;	
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height:  100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+/* làm  mờ ảnh cạnh dưới cho background */
+.banner:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
+  z-index: 1;
+  background: linear-gradient(to top, #111, transparent);
+}
+.banner img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+ }
+.banner header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 21px;
+}
+.banner header .brand{
+  text-decoration: none;
+  margin: 20px 0;
+  color: #f2f2f2;
+  font-size: 33px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.banner header .nav {display: none;}
+
+/* hiện thanh điều hướng */
+.banner header .dropdownMenu {
+  display: flex;
+  position: absolute;
+  top: 57px;
+  left: 8px;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 95%;
+  border-radius: 3px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+  background-color: #f2f2f2;
+  opacity: 0.5;
+}
+.banner header .dropdownMenu a {
+  text-decoration: none;
+  color: #333;
+}
+.banner header .dropdownMenu a:hover {
+  background-color: #999;
+  color: #f3f3f3;
+}
+.banner header .toggle {
+  background: url(images/toggle.png);
+  width: 24px;
+  height: 18px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.banner .content {
+  position: relative;
+  width: 60%;
+  text-align: center;
+  /*z-index: 2;*/
+}
+.banner .content h2 {
+  font-size: 10vw;
+  font-weight: 700;
+}
+.banner .content p {
+  font-size: 5vw;
+  color: #fff;
+}
+.banner .button a {text-decoration: none;}
+.banner .button p {
+  position: relative;
+  background-color: #fff;
+  color: #333 !important; 
+  margin: 10px auto;
+  padding: 10px 25px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.7;
+}
+.banner .button p:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+.about {
+  padding: 15px 15px;
+  background-color: black; 
+}
+.contentBx {
+  margin-top: 30px;
+  color: #f2f2f2;
+}
+.about .contentBx blockquote h2 {font-size: 30px;}
+.about .contentBx p {
+  font-size: 18px;
+  margin: 0 2vw;
+}
+.about .img1 {
+  background: url(images/canh-dong-lua.jpg);
+  background-size: cover;
+  height: 250px;
+  margin-top: 30px;
+
+}
+.containerBx {
+  background-color: black;
+  padding: 30px 0;
+}
+.containerBx .heading{
+  color: #f2f2f2;
+  font-size: 18px;
+  text-align: center;
+}
+/* làm mờ ảnh cạnh trên và dưới của background */
+.banner2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+}
+ .banner2:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40%;
+  z-index: 1;
+  background: linear-gradient(to bottom, #111, transparent);
+}
+.banner2:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+  z-index: 1;
+  background: linear-gradient(to top, #111, transparent);
+}
+.banner2 img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+ }
+
+/* Các địa điểm du lịch */
+.destinations {
+  padding:0 40px 35px 40px;
+  background-color: black; 
+}
+.destinations .content h2 {
+  text-align: center;
+  color: #fff;
+  margin: 20px 0;
+  text-transform: capitalize;
+}
+.destinations .ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  max-width: 500px;
+  background-color: #444;
+  opacity: 0.7;
+}
+.destinations .ctn:hover {
+  opacity: 0.9;
+  transition: 0.5s;
+}
+.destinations .ctn a {
+  width: 100%;
+}
+.destinations .ctn p {
+  height: 20px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+}
+.imgBox {
+  display: block;
+  width: 100%;
+  height: 70%;
+}
+.destinations .button p {
+  position: relative;
+  bottom: -20px;
+  margin: 0 auto;
+  padding: 5px 10px;
+  max-width: 125px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  background-color: #fff;
+  color: #333 !important; 
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.destinations .button p:hover {
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+.footer {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding-top: 20px;
+ background-color: #111;
+}
+.footer .social-link a {
+  text-decoration: none;
+  margin: 0 15px;
+}
+.footer .social-link a img {
+  max-height: 13px;
+  margin: 10px;
+  filter: invert(1);
+}
+.footer p {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  /* tắt dropdown Menu */
+  .banner header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  }
+  .banner header .nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  }
+  .about .contentBx p {
+    font-size: 20px;
+  }
+  .banner header .toggle {display: none;}
+  .about .img1 {height: 500px;}
+  .imgBox {height: 250px;}
+  .destinations .ctn {max-width: 280px;margin-left: 40px;}
+  .destinations .button p {
+    position: relative;
+    bottom: -20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    max-width: 150px;
+  }
+  .footer p {font-size: 15px;}
+  .footer .social-link a img {max-height: 18px;}
+}
+
+@media only screen and (min-width: 992px) {
+  .destinations .ctn {margin-left: 30px;}
+  .about .contentBx p {
+    font-size: 23px;
+  }
+}
